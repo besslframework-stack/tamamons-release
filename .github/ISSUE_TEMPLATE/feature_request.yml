@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest an idea for Tamamon
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea for your desktop pet? We'd love to hear it. 🌱
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like Tamamon to do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would this help?
+      description: What are you trying to do, or what would make Tamamon more delightful?
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else? (optional)
+      description: Mockups, examples, or references welcome.

@@ -1,0 +1,57 @@
+name: Bug report
+description: Something in Tamamon isn't working right
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make Tamamon better! 🐣
+
+        One quick note so we don't chase the wrong thing: Tamamon reads only your **local**
+        Claude Code activity plus CPU and memory. It does **not** read your Claude subscription
+        or weekly limits, and by default nothing leaves your Mac.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "e.g. 15.5"
+    validations:
+      required: true
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac chip
+      options:
+        - Apple Silicon (M1/M2/M3/M4)
+        - Intel
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Tamamon version
+      description: Menu bar icon → About (or the version badge on the download).
+      placeholder: "e.g. v0.1.7"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (optional)
+      description: If the pet crashed or vanished, paste anything relevant here.
+      render: shell
